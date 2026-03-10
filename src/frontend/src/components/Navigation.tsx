@@ -24,7 +24,7 @@ export function Navigation() {
         >
           <Star className="w-4 h-4 text-primary fill-current shrink-0" />
           <span className="font-display font-bold text-primary text-glow tracking-wide text-sm md:text-base leading-tight">
-            OMSHASHTRI <span className="text-foreground/80">ASTROLOGY</span>
+            AstroAvi
           </span>
         </Link>
 

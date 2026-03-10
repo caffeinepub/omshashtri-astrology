@@ -59,7 +59,7 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <Star className="w-4 h-4 text-primary fill-current" />
             <span className="font-display font-bold text-primary tracking-wide text-sm">
-              OMSHASHTRI <span className="text-foreground/70">ASTROLOGY</span>
+              AstroAvi
             </span>
           </div>
           <p className="text-xs text-muted-foreground">

@@ -3,28 +3,30 @@ import { Eye, Heart, Star } from "lucide-react";
 import { motion } from "motion/react";
 import { useAboutPage } from "../hooks/useQueries";
 
-const FALLBACK_ABOUT = `Welcome to OMSHASHTRI ASTROLOGY, a sacred space where ancient cosmic wisdom meets modern spiritual exploration.
+const FALLBACK_ABOUT = `Welcome to AstroAvi, where ancient Vedic wisdom meets modern life guidance.
 
-We believe that the stars do not dictate your fate, but they illuminate the path. Astrology is the art of understanding the rhythmic patterns of the universe and how they mirror the cycles within each of us.
+AstroAvi was founded with a single mission: to make expert astrology accessible to everyone across India. With over 10 years of experience in Vedic astrology, we have helped thousands of people find clarity in love, family, and career through the power of the stars.
 
-Founded by a passionate collective of astrologers, mystics, and modern seekers, OMSHASHTRI ASTROLOGY was born from a deep reverence for the celestial language spoken by our ancestors. For thousands of years, humanity has looked up at the night sky and found meaning in the movements of planets and the stories written in constellations.
+We believe your birth chart is not a prediction of fate, but a map of your potential. Every planetary position, every house, every aspect tells the story of who you are and what you are here to do.
 
-Our mission is to make this profound wisdom accessible, practical, and deeply personal. Whether you are a curious newcomer or a seasoned stargazer, we offer daily horoscopes, birth chart insights, and cosmic guidance to help you navigate life's beautiful complexity.
+Whether you are struggling with relationship problems, family conflicts, career confusion, or health concerns — our detailed Kundli analysis and personalized guidance help you navigate life's challenges with confidence and clarity.
 
-The cosmos is not separate from you. You are made of stardust, governed by the same forces that move the tides and turn the seasons. Your chart is a love letter from the universe, written at the moment of your birth.
+Our consultations are rooted in authentic Vedic astrology, combined with compassionate listening and practical solutions. We offer personalized gemstone recommendations, mantra guidance, and actionable remedies tailored to your chart.
 
-May the stars light your way.`;
+Thousands of satisfied clients across India trust AstroAvi for accurate predictions, genuine guidance, and real solutions.
+
+Book your consultation today for just ₹499 for 30 minutes via WhatsApp and take the first step toward a clearer, more purposeful life.`;
 
 const values = [
   {
     icon: Star,
     label: "Cosmic Wisdom",
-    text: "Rooted in millennia of astrological tradition",
+    text: "Rooted in millennia of Vedic astrological tradition",
   },
   {
     icon: Heart,
     label: "Personal Growth",
-    text: "Astrology as a tool for self-understanding",
+    text: "Astrology as a tool for real life solutions",
   },
   {
     icon: Eye,
@@ -52,10 +54,11 @@ export function AboutPage() {
             ✦ Our Story ✦
           </p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground mb-4">
-            About OMSHASHTRI ASTROLOGY
+            About AstroAvi
           </h1>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            A sacred space where cosmic wisdom meets the modern soul.
+            Your trusted Vedic astrology guide for love, family and career
+            guidance.
           </p>
         </motion.div>
 
