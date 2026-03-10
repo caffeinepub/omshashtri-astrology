@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay-VariableFont_wght.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/Outfit-VariableFont_wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.11 0.035 268;
+    --foreground: 0.92 0.018 82;
+    --card: 0.15 0.04 268;
+    --card-foreground: 0.92 0.018 82;
+    --popover: 0.13 0.038 268;
+    --popover-foreground: 0.92 0.018 82;
+    --primary: 0.76 0.14 82;
+    --primary-foreground: 0.11 0.035 268;
+    --secondary: 0.22 0.06 270;
+    --secondary-foreground: 0.85 0.03 82;
+    --muted: 0.2 0.04 268;
+    --muted-foreground: 0.6 0.04 270;
+    --accent: 0.76 0.14 82;
+    --accent-foreground: 0.11 0.035 268;
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0.01 0;
+    --border: 0.28 0.06 268;
+    --input: 0.2 0.04 268;
+    --ring: 0.76 0.14 82;
+    --radius: 0.75rem;
+    --chart-1: 0.76 0.14 82;
+    --chart-2: 0.55 0.18 285;
+    --chart-3: 0.6 0.16 200;
+    --chart-4: 0.65 0.15 320;
+    --chart-5: 0.5 0.2 140;
+    --sidebar: 0.13 0.038 268;
+    --sidebar-foreground: 0.92 0.018 82;
+    --sidebar-primary: 0.76 0.14 82;
+    --sidebar-primary-foreground: 0.11 0.035 268;
+    --sidebar-accent: 0.22 0.06 270;
+    --sidebar-accent-foreground: 0.85 0.03 82;
+    --sidebar-border: 0.28 0.06 268;
+    --sidebar-ring: 0.76 0.14 82;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    min-height: 100vh;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .glow-gold {
+    box-shadow: 0 0 20px oklch(0.76 0.14 82 / 0.3), 0 0 60px
+      oklch(0.76 0.14 82 / 0.1);
+  }
+  .glow-gold-sm {
+    box-shadow: 0 0 10px oklch(0.76 0.14 82 / 0.25), 0 0 30px
+      oklch(0.76 0.14 82 / 0.08);
+  }
+  .text-glow {
+    text-shadow: 0 0 20px oklch(0.76 0.14 82 / 0.5);
+  }
+  .nebula-bg {
+    background: radial-gradient(
+        ellipse 60% 40% at 20% 50%,
+        oklch(0.25 0.1 280 / 0.5) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 50% 60% at 80% 30%,
+        oklch(0.2 0.08 300 / 0.4) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 40% 30% at 60% 80%,
+        oklch(0.22 0.06 260 / 0.3) 0%,
+        transparent 60%
+      ), oklch(0.11 0.035 268);
+  }
+  .card-cosmic {
+    background: linear-gradient(
+      135deg,
+      oklch(0.17 0.05 268 / 0.9),
+      oklch(0.14 0.04 280 / 0.9)
+    );
+    border: 1px solid oklch(0.76 0.14 82 / 0.2);
+    backdrop-filter: blur(8px);
+  }
+  .card-cosmic:hover {
+    border-color: oklch(0.76 0.14 82 / 0.5);
+    box-shadow: 0 0 20px oklch(0.76 0.14 82 / 0.15), 0 4px 24px
+      oklch(0.11 0.035 268 / 0.8);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px oklch(0.76 0.14 82 / 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px oklch(0.76 0.14 82 / 0.5), 0 0 60px
+      oklch(0.76 0.14 82 / 0.2);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-spin-slow {
+  animation: spin-slow 60s linear infinite;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
